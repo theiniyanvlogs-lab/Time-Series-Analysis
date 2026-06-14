@@ -1,0 +1,109 @@
+ADF Full Form
+
+ADF = Augmented Dickey-Fuller Test
+
+Let's break the name into parts:
+
+1. Dickey-Fuller
+
+The test was developed by two statisticians:
+
+David Dickey
+Wayne Fuller
+
+They introduced the original Dickey-Fuller (DF) Test.
+
+2. Augmented
+
+"Augmented" means:
+
+👉 Improved
+👉 Enhanced
+👉 Extended
+
+The original Dickey-Fuller test worked for simple time series.
+
+Researchers later added extra lag terms to handle more complex data.
+
+So:
+
+Augmented Dickey-Fuller (ADF) = Improved Dickey-Fuller Test
+
+Who Invented It?
+
+The original Dickey-Fuller test was proposed by:
+
+David Dickey
+Wayne Fuller
+
+Both were from the United States (USA).
+
+Which Year?
+
+Their famous research paper was published in:
+
+📅 1979
+
+Paper title:
+
+📖 Distribution of the Estimators for Autoregressive Time Series with a Unit Root
+
+This paper introduced the Dickey-Fuller test and laid the foundation for the later ADF test.
+
+Why Was It Invented?
+
+Before 1979, statisticians needed a reliable way to answer:
+
+"Is this time series stationary or non-stationary?"
+
+Examples:
+
+Stock prices
+Weather data
+Sales data
+Economic indicators
+
+Dickey and Fuller created a statistical test to detect the presence of a unit root.
+
+Unit Root Means
+
+A series keeps drifting over time and is generally:
+
+❌ Non-stationary
+
+Example:
+
+| Year | House Price |
+| ---- | ----------: |
+| 2021 |          40 |
+| 2022 |          50 |
+| 2023 |          65 |
+| 2024 |          80 |
+
+The values keep moving upward.
+=========
+
+Simple Story Behind the Name
+
+Imagine:
+
+👨‍🔬 David Dickey + 👨‍🔬 Wayne Fuller create a test in 1979.
+
+The test checks:
+
+"Is the data stable or wandering?"
+
+Later, statisticians improved it by adding extra lag terms.
+
+So the improved version became:
+
+Augmented + Dickey + Fuller = ADF
+
+=========
+
+ADF stands for Augmented Dickey-Fuller Test. It is an enhanced version of the Dickey-Fuller test, 
+originally developed by American statisticians David Dickey and Wayne Fuller in 1979. 
+It is used to check whether a time series is stationary or contains a unit root (non-stationary).
+
+=========
+
