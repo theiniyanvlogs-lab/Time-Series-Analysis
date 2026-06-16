@@ -97,6 +97,29 @@ only a few suitable models are evaluated, and the best one is chosen based on ac
 
 ========
 
+Dataset
+    ↓
+AR Model
+    ↓
+RMSE/MAPE
+
+Dataset
+    ↓
+MA Model
+    ↓
+RMSE/MAPE
+
+Dataset
+    ↓
+ARIMA Model
+    ↓
+RMSE/MAPE
+
+Compare Results
+    ↓
+Choose Best Model
+===========
+
 
 
 
