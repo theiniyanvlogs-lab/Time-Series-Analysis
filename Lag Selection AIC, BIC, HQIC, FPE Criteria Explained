@@ -1,0 +1,130 @@
+Lag Selection Criteria Explained
+
+| Criterion | Full Form                          | Purpose                                           | Rule                 |
+| --------- | ---------------------------------- | ------------------------------------------------- | -------------------- |
+| AIC       | Akaike Information Criterion       | Finds the best balance between fit and complexity | Lowest value is best |
+| BIC       | Bayesian Information Criterion     | Penalizes complex models more strongly            | Lowest value is best |
+| HQIC      | Hannan-Quinn Information Criterion | Middle ground between AIC and BIC                 | Lowest value is best |
+| FPE       | Final Prediction Error             | Estimates future forecasting error                | Lowest value is best |
+
+=======
+1. AIC (Akaike Information Criterion)
+What is it?
+
+AIC checks:
+
+"Does adding more lags improve prediction accuracy?"
+
+Formula:
+
+AIC = -2(Log Likelihood) + 2k
+
+Where:
+
+Log Likelihood = Model fit quality
+k = Number of parameters
+Use
+Focuses on prediction accuracy
+Often chooses larger lag values
+Preferred when forecasting is the main goal
+Your Result
+Lag	AIC
+15	46.97 ⭐
+
+Therefore:
+
+✅ AIC selected VAR(15)
+
+2. BIC (Bayesian Information Criterion)
+What is it?
+
+BIC is similar to AIC but penalizes complexity more heavily.
+
+Formula:
+
+BIC = -2(Log Likelihood) + k ln(n)
+
+Where:
+
+n = Number of observations
+Use
+Avoids overfitting
+Produces simpler models
+Often selects smaller lags
+Your Result
+Lag	BIC
+10	47.27 ⭐
+
+Therefore:
+
+✅ BIC selected VAR(10)
+
+3. HQIC (Hannan-Quinn Information Criterion)
+What is it?
+
+HQIC is a compromise between AIC and BIC.
+
+Use
+More balanced
+Neither too simple nor too complex
+Your Result
+Lag	HQIC
+15	47.09 ⭐
+
+Therefore:
+
+✅ HQIC selected VAR(15)
+
+4. FPE (Final Prediction Error)
+What is it?
+
+FPE estimates how much forecasting error the model will produce on unseen data.
+
+Use
+Directly related to forecasting quality
+Lower value means better future predictions
+Your Result
+Lag	FPE
+15	2.503e+20 ⭐
+
+Therefore:
+
+✅ FPE selected VAR(15)
+
+Why Did We Choose VAR(15)?
+Criterion	Selected Lag
+AIC	15 ✅
+FPE	15 ✅
+HQIC	15 ✅
+BIC	10
+Majority Vote	15 ✅
+
+Since 3 out of 4 criteria selected Lag = 15, we choose:
+
+Final Model = VAR(15)
+Viva Question & Answer
+Why did you select VAR(15)?
+
+Answer:
+
+The optimal lag order was determined using AIC, BIC, HQIC, and FPE criteria. AIC, HQIC, and FPE selected lag 15, while BIC selected lag 10. Since the majority of criteria favored lag 15 and the objective was forecasting accuracy, VAR(15) was selected as the final model.
+
+Easy Real-Life Example
+
+Imagine you are predicting tomorrow's Reliance stock price.
+
+VAR(1) → Looks at only yesterday.
+VAR(5) → Looks at the last 5 days.
+VAR(15) → Looks at the last 15 days.
+
+The lag selection criteria concluded:
+
+"To predict tomorrow's stock price accurately, the previous 15 days contain the most useful information."
+
+That's why your model became VAR(15). 📈
+
+
+AIC, HQIC, and FPE identified Lag 15 as the optimal lag because it provided the best balance between model fit 
+and forecasting performance, so VAR(15) was selected for stock price forecasting.
+
+=========
