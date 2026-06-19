@@ -1,0 +1,19 @@
+| Library         | Purpose                          |
+| --------------- | -------------------------------- |
+| Pandas          | Data Loading & Processing        |
+| NumPy           | Numerical Calculations           |
+| Matplotlib      | Data Visualization               |
+| Scikit-learn    | Machine Learning Metrics         |
+| **Statsmodels** | Statistical & Time Series Models |
+
+
+==========
+
+Developed Using
+
+🐍 Python
+📊 Pandas
+🔢 NumPy
+📈 Matplotlib
+🤖 Statsmodels
+📏 Scikit-learn
