@@ -1,0 +1,335 @@
+SARIMAX Explained Simply
+
+SARIMAX stands for:
+
+S → Seasonal
+A → AutoRegressive
+R → Integrated
+I → Moving Average
+M → eXogenous Variables
+
+SARIMA vs SARIMAX
+SARIMA
+
+Uses only past values of the target variable.
+
+Example:
+
+Yesterday Bookings
+↓
+Today Forecast
+
+Question:
+
+Can we predict future hotel bookings using only past hotel bookings?
+
+Answer:
+Yes, using SARIMA.
+
+SARIMAX
+
+Uses past values plus external factors.
+
+Example:
+
+Past Hotel Bookings
++
+Room Price (ADR)
++
+Lead Time
++
+Special Requests
+↓
+Future Booking Forecast
+
+This is SARIMAX.
+
+Real-Time Example
+
+Imagine a hotel.
+
+Target Variable (Y):
+
+Daily Bookings
+
+External Variables (X):
+
+Room Price
+Weekend/Holiday
+Lead Time
+Number of Guests
+Special Requests
+
+These factors affect booking demand.
+
+SARIMAX learns:
+
+Higher Room Price
+↓
+Lower Bookings
+
+Festival Season
+↓
+Higher Bookings
+
+More Lead Time
+↓
+Higher Future Bookings
+Formula
+
+SARIMAX is:
+
+Forecast
+=
+SARIMA Components
++
+External Variables (X)
+
+or
+
+Y = SARIMA + X
+
+where:
+
+Y = Target Variable
+X = External Variables
+Tamil Explanation
+SARIMA
+
+கடந்த கால Booking Data மட்டும் பயன்படுத்தி Forecast செய்வது.
+
+Example:
+
+நேற்று Booking = 100
+இன்று Booking = 110
+
+நாளை?
+
+SARIMA predicts from previous bookings only.
+
+SARIMAX
+
+Booking Data + வெளிப்புற காரணிகள் பயன்படுத்தி Forecast செய்வது.
+
+Example:
+
+Booking History
++
+Room Price
++
+Festival
++
+Holiday
++
+Lead Time
+↓
+Future Booking Forecast
+
+இதனால் Forecast Accuracy அதிகரிக்கும்.
+
+Chennai Temperature Example
+SARIMA
+Past Temperature
+↓
+Future Temperature
+SARIMAX
+Past Temperature
++
+Humidity
++
+Rainfall
++
+Wind Speed
+↓
+Future Temperature
+
+Here:
+
+Target (Y) = Temperature
+Exogenous Variables (X) = Humidity, Rainfall, Wind Speed
+Air Passenger Example
+
+Target:
+
+Passengers Count
+
+External Variables:
+
+Fuel Price
+Holiday Season
+GDP Growth
+Tourism Demand
+
+Forecast:
+
+Future Passenger Count
+Easy Interview Answer
+
+What is SARIMAX?
+
+SARIMAX (Seasonal AutoRegressive Integrated Moving Average with eXogenous Variables) is an advanced time series forecasting model that predicts future values using historical data, seasonality, trends, and external influencing variables such as holidays, prices, weather, or promotions.
+
+Memory Trick
+ARIMA
+  ↓
+SARIMA
+  ↓
+SARIMAX
+
+ARIMA = Trend Forecasting
+
+SARIMA = Trend + Seasonality
+
+SARIMAX = Trend + Seasonality + External Factors
+
+This is why SARIMAX is generally more powerful and often more accurate than SARIMA when relevant external variables are available.
+
+sarimax in Tamil explain 
+SARIMAX என்றால் என்ன? (தமிழில்)
+
+SARIMAX = Seasonal AutoRegressive Integrated Moving Average with eXogenous Variables
+
+எளிமையாக சொன்னால்,
+
+👉 கடந்த கால தரவுகள் (Historical Data) + பருவநிலை (Seasonality) + வெளிப்புற காரணிகள் (External Factors) ஆகியவற்றைப் பயன்படுத்தி எதிர்காலத்தை கணிக்கும் ஒரு Time Series Forecasting Model.
+
+SARIMA மற்றும் SARIMAX வித்தியாசம்
+SARIMA
+
+SARIMA-வில்:
+
+கடந்த கால தரவுகள் மட்டும்
+↓
+Forecast
+
+உதாரணம்:
+
+கடந்த 2 ஆண்டுகளின் ஹோட்டல் Booking Data-வை வைத்து அடுத்த மாத Booking-ஐ கணிப்பது.
+
+SARIMAX
+
+SARIMAX-வில்:
+
+கடந்த கால தரவுகள்
++
+வெளிப்புற காரணிகள்
+↓
+Forecast
+
+உதாரணம்:
+
+Hotel Booking History
+Room Rate (ADR)
+Holiday Season
+Festival
+Lead Time
+
+இவற்றை சேர்த்து Forecast செய்வது.
+
+ஹோட்டல் Booking உதாரணம்
+
+நீங்கள் ஒரு ஹோட்டல் வைத்திருக்கிறீர்கள் என்று நினைத்துக் கொள்ளுங்கள்.
+
+Target Variable (Y)
+Daily Hotel Bookings
+External Variables (X)
+Room Price (ADR)
+Lead Time
+Adults Count
+Children Count
+Special Requests
+
+SARIMAX புரிந்துகொள்வது:
+
+Holiday வந்தால்
+↓
+Booking அதிகரிக்கும்
+
+Room Price அதிகமானால்
+↓
+Booking குறையலாம்
+
+Festival Season வந்தால்
+↓
+Booking அதிகரிக்கும்
+
+இந்த தகவல்களை பயன்படுத்தி Forecast செய்கிறது.
+
+சென்னை Temperature உதாரணம்
+SARIMA
+கடந்த கால Temperature
+↓
+Future Temperature
+SARIMAX
+Temperature
++
+Humidity
++
+Rainfall
++
+Wind Speed
+↓
+Future Temperature Forecast
+
+இங்கே:
+
+Y = Temperature
+X = Humidity, Rainfall, Wind Speed
+எளிய வாழ்க்கை உதாரணம்
+
+நாளை ஐஸ்கிரீம் விற்பனை எவ்வளவு இருக்கும் என்று கணிக்க வேண்டும்.
+
+SARIMA
+கடந்த விற்பனை தரவுகள் மட்டும்
+↓
+Forecast
+SARIMAX
+கடந்த விற்பனை
++
+வெப்பநிலை
++
+விடுமுறை நாள்
++
+வார இறுதி
+↓
+Forecast
+
+இதனால் கணிப்பு துல்லியம் (Accuracy) அதிகரிக்கும்.
+
+SARIMAX ஏன் பயன்படுத்த வேண்டும்?
+SARIMA
+Historical Data மட்டும்
+SARIMAX
+Historical Data
++
+Business Influencing Factors
+
+அதனால்:
+
+✅ அதிக Accuracy
+✅ Business Insights கிடைக்கும்
+✅ Real-world Forecasting-க்கு சிறந்தது
+✅ Data Analyst / Data Scientist Project-களில் அதிக மதிப்பு
+
+Interview Answer (தமிழில்)
+
+"SARIMAX என்றால் என்ன?"
+
+SARIMAX என்பது Time Series Forecasting Model ஆகும். இது கடந்த கால தரவுகள், பருவநிலை மாற்றங்கள் (Seasonality) மற்றும் வெளிப்புற காரணிகள் (External Variables) ஆகியவற்றை பயன்படுத்தி எதிர்கால மதிப்புகளை துல்லியமாக கணிக்க உதவுகிறது.
+
+நினைவில் வைத்துக்கொள்ள
+ARIMA
+↓
+Trend
+
+SARIMA
+↓
+Trend + Seasonality
+
+SARIMAX
+↓
+Trend + Seasonality + External Factors
+
+"X" = External Variables (வெளிப்புற காரணிகள்)
+
+இதுவே SARIMAX-இன் முக்கிய சிறப்பு. 🚀
