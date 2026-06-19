@@ -1,0 +1,152 @@
+1. VARMA
+
+Uses only variables within the dataset.
+
+Example (Infosys)
+
+Input Variables:
+
+Open Price
+High Price
+Low Price
+Close Price
+Traded Quantity
+
+Forecast:
+
+Future Open
+Future High
+Future Low
+Future Close
+Future Quantity
+
+Model learns:
+
+Today's Close
+depends on
+Yesterday's Open
+Yesterday's High
+Yesterday's Low
+Yesterday's Close
+Yesterday's Volume
+Formula
+Yt = AR terms + MA terms + Error
+2. VARMAX
+
+Uses internal variables + external variables (Exogenous Variables).
+
+Example
+
+Endogenous Variables:
+
+Open Price
+High Price
+Low Price
+Close Price
+Volume
+
+External Variables:
+
+NIFTY Index
+USD-INR Exchange Rate
+Interest Rate
+Inflation
+Crude Oil Price
+
+Forecast:
+
+Infosys Stock Price
+
+based on both stock history and market conditions.
+
+Formula
+Yt = AR + MA + X + Error
+
+Where:
+
+X = External Variables
+Real-Time Example
+VARMA
+
+Imagine predicting your daughter's semester marks using:
+
+Math Marks
+Physics Marks
+Chemistry Marks
+Computer Marks
+
+Only internal subjects are considered.
+
+VARMAX
+
+Predicting marks using:
+
+Math Marks
+Physics Marks
+Chemistry Marks
+Computer Marks
+
++
+Study Hours
+Attendance
+Sleep Hours
+
+External factors are added.
+
+Result:
+✅ Usually better prediction.
+
+In Python
+VARMA
+from statsmodels.tsa.statespace.varmax import VARMAX
+
+model = VARMAX(
+    train,
+    order=(2,1)
+)
+
+Even though the class name is VARMAX, if you do not provide exog=, it behaves as a VARMA model.
+
+VARMAX
+model = VARMAX(
+    endog=train,
+    exog=external_data,
+    order=(2,1)
+)
+For Your Project
+Current Infosys Dataset
+
+You have:
+
+Open Price
+High Price
+Low Price
+Close Price
+Traded Quantity
+
+No external variables.
+
+✅ Correct model: VARMA
+
+If You Add
+NIFTY 50 Index
+USD-INR Rate
+Gold Price
+Crude Oil Price
+
+then
+
+✅ Correct model: VARMAX
+
+Interview Question Answer
+
+Q: Why did you choose VARMA instead of VARMAX?
+
+Answer:
+
+The available Infosys dataset contained only endogenous variables such as Open Price, High Price, Low Price, Close Price, 
+and Traded Quantity. Since no external explanatory variables were available, 
+VARMA was selected to model the interdependencies among multiple stock variables.
+VARMAX would be appropriate when external factors such as market indices, exchange rates, or economic indicators are included.
+
+========
